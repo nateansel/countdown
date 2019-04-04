@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setCountdownToDate:(nonnull NSDate *)date;
 - (nonnull NSDate *)countdownToDate;
+- (nonnull DateChangeButton *)countdownToDateButton;
 
 - (void)showElements;
 - (void)showElementsAnimated:(bool)animated;

@@ -8,10 +8,17 @@
 
 @import UIKit;
 #import "CountdownView.h"
+#import "PresentTimeChangeViewControllerAnimatedTransitioning.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CountdownViewController : UIViewController
+
+@end
+
+// MARK: - UIViewControllerTransitioningDelegate
+
+@interface CountdownViewController (UIViewControllerTransitioningDelegate) <UIViewControllerTransitioningDelegate>
 
 @end
 

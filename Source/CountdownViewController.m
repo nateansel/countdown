@@ -49,6 +49,11 @@
 	[[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
 	[self updateValues:nil];
 	[self.countdownView hideElementsAnimated:YES withDelay:3];
+	[[self.countdownView countdownToDateButton] addTarget:self action:@selector(countdownToDateButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)countdownToDateButtonPressed:(DateChangeButton *)sender {
+	
 }
 
 - (BOOL)prefersStatusBarHidden {
@@ -67,6 +72,19 @@
 			[timer invalidate];
 		}
 	}
+}
+
+@end
+
+@implementation CountdownViewController (UIViewControllerTransitioningDelegate)
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+	return [[PresentTimeChangeViewControllerAnimatedTransitioning alloc] init];
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+	#warning This will not work correctly, need to write a dismiss transitioning to use here
+	return [[PresentTimeChangeViewControllerAnimatedTransitioning alloc] init];
 }
 
 @end

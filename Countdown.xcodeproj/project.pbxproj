@@ -18,6 +18,7 @@
 		0EB0095F21A4B4DB00263D2A /* CountdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB0095E21A4B4DB00263D2A /* CountdownView.m */; };
 		0EB0096221A4BC5D00263D2A /* CountdownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB0096121A4BC5D00263D2A /* CountdownViewController.m */; };
 		0EC9A66C21ADDB8C0060153E /* PushDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC9A66B21ADDB8C0060153E /* PushDownButton.m */; };
+		0EFC37872256B4CE0018D031 /* PresentTimeChangeViewControllerAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC37862256B4CE0018D031 /* PresentTimeChangeViewControllerAnimatedTransitioning.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,8 @@
 		0EFC377E2256A14A0018D031 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		0EFC37812256A16A0018D031 /* .xcode-version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ".xcode-version"; sourceTree = "<group>"; };
 		0EFC37832256A16F0018D031 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		0EFC37852256B4CE0018D031 /* PresentTimeChangeViewControllerAnimatedTransitioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentTimeChangeViewControllerAnimatedTransitioning.h; sourceTree = "<group>"; };
+		0EFC37862256B4CE0018D031 /* PresentTimeChangeViewControllerAnimatedTransitioning.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentTimeChangeViewControllerAnimatedTransitioning.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,8 @@
 				0E01890221B7397200A391D3 /* TimeChangeView.m */,
 				0E01890421B7398600A391D3 /* TimeChangeViewController.h */,
 				0E01890521B7398600A391D3 /* TimeChangeViewController.m */,
+				0EFC37852256B4CE0018D031 /* PresentTimeChangeViewControllerAnimatedTransitioning.h */,
+				0EFC37862256B4CE0018D031 /* PresentTimeChangeViewControllerAnimatedTransitioning.m */,
 			);
 			path = "Time Change";
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EFC37872256B4CE0018D031 /* PresentTimeChangeViewControllerAnimatedTransitioning.m in Sources */,
 				0EC9A66C21ADDB8C0060153E /* PushDownButton.m in Sources */,
 				0E0A2A5921ADED42007A1231 /* DateChangeButton.m in Sources */,
 				0E0188FF21B734AA00A391D3 /* TimeView.m in Sources */,
