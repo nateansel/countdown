@@ -18,10 +18,6 @@
 		0EB0095F21A4B4DB00263D2A /* CountdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB0095E21A4B4DB00263D2A /* CountdownView.m */; };
 		0EB0096221A4BC5D00263D2A /* CountdownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB0096121A4BC5D00263D2A /* CountdownViewController.m */; };
 		0EC9A66C21ADDB8C0060153E /* PushDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC9A66B21ADDB8C0060153E /* PushDownButton.m */; };
-		0EFC377D2256A1420018D031 /* fastfile in Resources */ = {isa = PBXBuildFile; fileRef = 0EFC377C2256A1420018D031 /* fastfile */; };
-		0EFC377F2256A14A0018D031 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 0EFC377E2256A14A0018D031 /* readme.md */; };
-		0EFC37822256A16A0018D031 /* .xcode-version in Resources */ = {isa = PBXBuildFile; fileRef = 0EFC37812256A16A0018D031 /* .xcode-version */; };
-		0EFC37842256A16F0018D031 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0EFC37832256A16F0018D031 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -208,11 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EB0095321A4B48500263D2A /* LaunchScreen.storyboard in Resources */,
-				0EFC37822256A16A0018D031 /* .xcode-version in Resources */,
 				0EB0095021A4B48500263D2A /* Assets.xcassets in Resources */,
-				0EFC377F2256A14A0018D031 /* readme.md in Resources */,
-				0EFC37842256A16F0018D031 /* .gitignore in Resources */,
-				0EFC377D2256A1420018D031 /* fastfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
