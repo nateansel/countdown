@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E0188FF21B734AA00A391D3 /* TimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0188FE21B734AA00A391D3 /* TimeView.m */; };
+		0E01890321B7397200A391D3 /* TimeChangeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E01890221B7397200A391D3 /* TimeChangeView.m */; };
+		0E01890621B7398600A391D3 /* TimeChangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E01890521B7398600A391D3 /* TimeChangeViewController.m */; };
+		0E0A2A5921ADED42007A1231 /* DateChangeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0A2A5821ADED42007A1231 /* DateChangeButton.m */; };
+		0EB0094821A4B48400263D2A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB0094721A4B48400263D2A /* AppDelegate.m */; };
+		0EB0095021A4B48500263D2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EB0094F21A4B48500263D2A /* Assets.xcassets */; };
+		0EB0095321A4B48500263D2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EB0095121A4B48500263D2A /* LaunchScreen.storyboard */; };
+		0EB0095621A4B48500263D2A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB0095521A4B48500263D2A /* main.m */; };
+		0EB0095F21A4B4DB00263D2A /* CountdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB0095E21A4B4DB00263D2A /* CountdownView.m */; };
+		0EB0096221A4BC5D00263D2A /* CountdownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB0096121A4BC5D00263D2A /* CountdownViewController.m */; };
+		0EC9A66C21ADDB8C0060153E /* PushDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC9A66B21ADDB8C0060153E /* PushDownButton.m */; };
+		0EFC377D2256A1420018D031 /* fastfile in Resources */ = {isa = PBXBuildFile; fileRef = 0EFC377C2256A1420018D031 /* fastfile */; };
+		0EFC377F2256A14A0018D031 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 0EFC377E2256A14A0018D031 /* readme.md */; };
+		0EFC37822256A16A0018D031 /* .xcode-version in Resources */ = {isa = PBXBuildFile; fileRef = 0EFC37812256A16A0018D031 /* .xcode-version */; };
+		0EFC37842256A16F0018D031 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0EFC37832256A16F0018D031 /* .gitignore */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0E0188FD21B734AA00A391D3 /* TimeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeView.h; sourceTree = "<group>"; };
+		0E0188FE21B734AA00A391D3 /* TimeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeView.m; sourceTree = "<group>"; };
+		0E01890121B7397200A391D3 /* TimeChangeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeChangeView.h; sourceTree = "<group>"; };
+		0E01890221B7397200A391D3 /* TimeChangeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeChangeView.m; sourceTree = "<group>"; };
+		0E01890421B7398600A391D3 /* TimeChangeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeChangeViewController.h; sourceTree = "<group>"; };
+		0E01890521B7398600A391D3 /* TimeChangeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeChangeViewController.m; sourceTree = "<group>"; };
+		0E0A2A5721ADED42007A1231 /* DateChangeButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateChangeButton.h; sourceTree = "<group>"; };
+		0E0A2A5821ADED42007A1231 /* DateChangeButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateChangeButton.m; sourceTree = "<group>"; };
+		0EB0094321A4B48400263D2A /* Countdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EB0094621A4B48400263D2A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0EB0094721A4B48400263D2A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0EB0094F21A4B48500263D2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0EB0095221A4B48500263D2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0EB0095421A4B48500263D2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EB0095521A4B48500263D2A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0EB0095D21A4B4DB00263D2A /* CountdownView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountdownView.h; sourceTree = "<group>"; };
+		0EB0095E21A4B4DB00263D2A /* CountdownView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountdownView.m; sourceTree = "<group>"; };
+		0EB0096021A4BC5D00263D2A /* CountdownViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountdownViewController.h; sourceTree = "<group>"; };
+		0EB0096121A4BC5D00263D2A /* CountdownViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountdownViewController.m; sourceTree = "<group>"; };
+		0EC9A66A21ADDB8C0060153E /* PushDownButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushDownButton.h; sourceTree = "<group>"; };
+		0EC9A66B21ADDB8C0060153E /* PushDownButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushDownButton.m; sourceTree = "<group>"; };
+		0EFC377C2256A1420018D031 /* fastfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fastfile; path = fastlane/fastfile; sourceTree = "<group>"; };
+		0EFC377E2256A14A0018D031 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		0EFC37812256A16A0018D031 /* .xcode-version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ".xcode-version"; sourceTree = "<group>"; };
+		0EFC37832256A16F0018D031 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0EB0094021A4B48400263D2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E01890021B7395E00A391D3 /* Time Change */ = {
+			isa = PBXGroup;
+			children = (
+				0E01890121B7397200A391D3 /* TimeChangeView.h */,
+				0E01890221B7397200A391D3 /* TimeChangeView.m */,
+				0E01890421B7398600A391D3 /* TimeChangeViewController.h */,
+				0E01890521B7398600A391D3 /* TimeChangeViewController.m */,
+			);
+			path = "Time Change";
+			sourceTree = "<group>";
+		};
+		0EB0093A21A4B48400263D2A = {
+			isa = PBXGroup;
+			children = (
+				0EB0094521A4B48400263D2A /* Source */,
+				0EFC37802256A1560018D031 /* Auxiliary Files */,
+				0EFC377B2256A12D0018D031 /* Fastlane */,
+				0EB0094421A4B48400263D2A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0EB0094421A4B48400263D2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0EB0094321A4B48400263D2A /* Countdown.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0EB0094521A4B48400263D2A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0EB0094621A4B48400263D2A /* AppDelegate.h */,
+				0EB0094721A4B48400263D2A /* AppDelegate.m */,
+				0E0A2A5721ADED42007A1231 /* DateChangeButton.h */,
+				0E0A2A5821ADED42007A1231 /* DateChangeButton.m */,
+				0E0188FD21B734AA00A391D3 /* TimeView.h */,
+				0E0188FE21B734AA00A391D3 /* TimeView.m */,
+				0EB0095D21A4B4DB00263D2A /* CountdownView.h */,
+				0EB0095E21A4B4DB00263D2A /* CountdownView.m */,
+				0EB0096021A4BC5D00263D2A /* CountdownViewController.h */,
+				0EB0096121A4BC5D00263D2A /* CountdownViewController.m */,
+				0E01890021B7395E00A391D3 /* Time Change */,
+				0EC9A66921ADDA620060153E /* Push Down Button */,
+				0EB0095C21A4B4A700263D2A /* Extras */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		0EB0095C21A4B4A700263D2A /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				0EB0094F21A4B48500263D2A /* Assets.xcassets */,
+				0EB0095121A4B48500263D2A /* LaunchScreen.storyboard */,
+				0EB0095421A4B48500263D2A /* Info.plist */,
+				0EB0095521A4B48500263D2A /* main.m */,
+			);
+			path = Extras;
+			sourceTree = "<group>";
+		};
+		0EC9A66921ADDA620060153E /* Push Down Button */ = {
+			isa = PBXGroup;
+			children = (
+				0EC9A66A21ADDB8C0060153E /* PushDownButton.h */,
+				0EC9A66B21ADDB8C0060153E /* PushDownButton.m */,
+			);
+			path = "Push Down Button";
+			sourceTree = "<group>";
+		};
+		0EFC377B2256A12D0018D031 /* Fastlane */ = {
+			isa = PBXGroup;
+			children = (
+				0EFC377C2256A1420018D031 /* fastfile */,
+			);
+			name = Fastlane;
+			sourceTree = "<group>";
+		};
+		0EFC37802256A1560018D031 /* Auxiliary Files */ = {
+			isa = PBXGroup;
+			children = (
+				0EFC377E2256A14A0018D031 /* readme.md */,
+				0EFC37812256A16A0018D031 /* .xcode-version */,
+				0EFC37832256A16F0018D031 /* .gitignore */,
+			);
+			name = "Auxiliary Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0EB0094221A4B48400263D2A /* Countdown */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EB0095921A4B48500263D2A /* Build configuration list for PBXNativeTarget "Countdown" */;
+			buildPhases = (
+				0EB0093F21A4B48400263D2A /* Sources */,
+				0EB0094021A4B48400263D2A /* Frameworks */,
+				0EB0094121A4B48400263D2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Countdown;
+			productName = Thanksgiving;
+			productReference = 0EB0094321A4B48400263D2A /* Countdown.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0EB0093B21A4B48400263D2A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Nathan Ansel";
+				TargetAttributes = {
+					0EB0094221A4B48400263D2A = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 0EB0093E21A4B48400263D2A /* Build configuration list for PBXProject "Countdown" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0EB0093A21A4B48400263D2A;
+			productRefGroup = 0EB0094421A4B48400263D2A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0EB0094221A4B48400263D2A /* Countdown */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0EB0094121A4B48400263D2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EB0095321A4B48500263D2A /* LaunchScreen.storyboard in Resources */,
+				0EFC37822256A16A0018D031 /* .xcode-version in Resources */,
+				0EB0095021A4B48500263D2A /* Assets.xcassets in Resources */,
+				0EFC377F2256A14A0018D031 /* readme.md in Resources */,
+				0EFC37842256A16F0018D031 /* .gitignore in Resources */,
+				0EFC377D2256A1420018D031 /* fastfile in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0EB0093F21A4B48400263D2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EC9A66C21ADDB8C0060153E /* PushDownButton.m in Sources */,
+				0E0A2A5921ADED42007A1231 /* DateChangeButton.m in Sources */,
+				0E0188FF21B734AA00A391D3 /* TimeView.m in Sources */,
+				0E01890321B7397200A391D3 /* TimeChangeView.m in Sources */,
+				0E01890621B7398600A391D3 /* TimeChangeViewController.m in Sources */,
+				0EB0095F21A4B4DB00263D2A /* CountdownView.m in Sources */,
+				0EB0096221A4BC5D00263D2A /* CountdownViewController.m in Sources */,
+				0EB0094821A4B48400263D2A /* AppDelegate.m in Sources */,
+				0EB0095621A4B48500263D2A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0EB0095121A4B48500263D2A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0EB0095221A4B48500263D2A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0EB0095721A4B48500263D2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0EB0095821A4B48500263D2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0EB0095A21A4B48500263D2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37E2RLU4H9;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Extras/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.NathanAnsel.countdown;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0EB0095B21A4B48500263D2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37E2RLU4H9;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Extras/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.NathanAnsel.countdown;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0EB0093E21A4B48400263D2A /* Build configuration list for PBXProject "Countdown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EB0095721A4B48500263D2A /* Debug */,
+				0EB0095821A4B48500263D2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0EB0095921A4B48500263D2A /* Build configuration list for PBXNativeTarget "Countdown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EB0095A21A4B48500263D2A /* Debug */,
+				0EB0095B21A4B48500263D2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0EB0093B21A4B48400263D2A /* Project object */;
+}
