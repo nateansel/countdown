@@ -28,11 +28,11 @@
 	self.countdownToDate = (NSDate *) [[NSUserDefaults standardUserDefaults] objectForKey:@"countdownToDate"];
 	if (self.countdownToDate == nil) {
 		NSDateComponents *components = [[NSDateComponents alloc] init];
-		[components setTimeZone:[[NSTimeZone alloc] initWithName:@"America/Chicago"]];
-		[components setYear:2018];
-		[components setMonth:12];
-		[components setDay:07];
-		[components setHour:00];
+		[components setTimeZone:[[NSTimeZone alloc] initWithName:@"America/Los_Angeles"]];
+		[components setYear:2019];
+		[components setMonth:06];
+		[components setDay:03];
+		[components setHour:10];
 		[components setMinute:00];
 		[components setSecond:00];
 		self.countdownToDate = [[NSCalendar currentCalendar] dateFromComponents:components];
