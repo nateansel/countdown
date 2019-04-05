@@ -9,6 +9,7 @@
 @import UIKit;
 #import "CountdownView.h"
 #import "PresentTimeChangeViewControllerAnimatedTransitioning.h"
+#import "DismissTimeChangeViewControllerAnimatedTransitioning.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

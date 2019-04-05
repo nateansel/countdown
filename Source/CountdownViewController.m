@@ -79,12 +79,13 @@
 @implementation CountdownViewController (UIViewControllerTransitioningDelegate)
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
-	return [[PresentTimeChangeViewControllerAnimatedTransitioning alloc] init];
+	PresentTimeChangeViewControllerAnimatedTransitioning *transition = [[PresentTimeChangeViewControllerAnimatedTransitioning alloc] init];
+	return transition;
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
-	#warning This will not work correctly, need to write a dismiss transitioning to use here
-	return [[PresentTimeChangeViewControllerAnimatedTransitioning alloc] init];
+	DismissTimeChangeViewControllerAnimatedTransitioning *transition = [[DismissTimeChangeViewControllerAnimatedTransitioning alloc] init];
+	return transition;
 }
 
 @end

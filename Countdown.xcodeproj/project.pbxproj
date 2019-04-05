@@ -19,6 +19,7 @@
 		0EB0096221A4BC5D00263D2A /* CountdownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB0096121A4BC5D00263D2A /* CountdownViewController.m */; };
 		0EC9A66C21ADDB8C0060153E /* PushDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC9A66B21ADDB8C0060153E /* PushDownButton.m */; };
 		0EFC37872256B4CE0018D031 /* PresentTimeChangeViewControllerAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC37862256B4CE0018D031 /* PresentTimeChangeViewControllerAnimatedTransitioning.m */; };
+		0EFC378A2257BF6D0018D031 /* DismissTimeChangeViewControllerAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC37892257BF6D0018D031 /* DismissTimeChangeViewControllerAnimatedTransitioning.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,8 @@
 		0EFC37832256A16F0018D031 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		0EFC37852256B4CE0018D031 /* PresentTimeChangeViewControllerAnimatedTransitioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentTimeChangeViewControllerAnimatedTransitioning.h; sourceTree = "<group>"; };
 		0EFC37862256B4CE0018D031 /* PresentTimeChangeViewControllerAnimatedTransitioning.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentTimeChangeViewControllerAnimatedTransitioning.m; sourceTree = "<group>"; };
+		0EFC37882257BF6D0018D031 /* DismissTimeChangeViewControllerAnimatedTransitioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DismissTimeChangeViewControllerAnimatedTransitioning.h; sourceTree = "<group>"; };
+		0EFC37892257BF6D0018D031 /* DismissTimeChangeViewControllerAnimatedTransitioning.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DismissTimeChangeViewControllerAnimatedTransitioning.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,8 @@
 				0E01890521B7398600A391D3 /* TimeChangeViewController.m */,
 				0EFC37852256B4CE0018D031 /* PresentTimeChangeViewControllerAnimatedTransitioning.h */,
 				0EFC37862256B4CE0018D031 /* PresentTimeChangeViewControllerAnimatedTransitioning.m */,
+				0EFC37882257BF6D0018D031 /* DismissTimeChangeViewControllerAnimatedTransitioning.h */,
+				0EFC37892257BF6D0018D031 /* DismissTimeChangeViewControllerAnimatedTransitioning.m */,
 			);
 			path = "Time Change";
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 				0EB0096221A4BC5D00263D2A /* CountdownViewController.m in Sources */,
 				0EB0094821A4B48400263D2A /* AppDelegate.m in Sources */,
 				0EB0095621A4B48500263D2A /* main.m in Sources */,
+				0EFC378A2257BF6D0018D031 /* DismissTimeChangeViewControllerAnimatedTransitioning.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
