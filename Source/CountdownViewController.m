@@ -24,6 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	[self setDefinesPresentationContext:YES];
+//	[self setModalPresentationStyle:UIModalPresentationOverCurrentContext];
 	
 	self.countdownToDate = (NSDate *) [[NSUserDefaults standardUserDefaults] objectForKey:@"countdownToDate"];
 	if (self.countdownToDate == nil) {
@@ -53,7 +55,12 @@
 }
 
 - (void)countdownToDateButtonPressed:(DateChangeButton *)sender {
-	
+	TimeChangeViewController *vc = [[TimeChangeViewController alloc] init];
+	vc.delegate = self;
+	[vc setDate:self.countdownToDate];
+	[vc setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+//	vc.transitioningDelegate = self;
+	[self presentViewController:vc animated:true completion:nil];
 }
 
 - (BOOL)prefersStatusBarHidden {
@@ -86,6 +93,23 @@
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
 	DismissTimeChangeViewControllerAnimatedTransitioning *transition = [[DismissTimeChangeViewControllerAnimatedTransitioning alloc] init];
 	return transition;
+}
+
+@end
+
+// MARK: - TimeChangeViewControllerDelegate
+
+@implementation CountdownViewController (TimeChangeViewControllerDelegate)
+
+- (void)cancelTimeChange {
+	[self dismissViewControllerAnimated:true completion:nil];
+}
+
+- (void)saveNewCountdownTime:(nonnull NSDate *)date {
+	[self setCountdownToDate:date];
+	[self.countdownView setCountdownToDate:date];
+	[self updateValues:nil];
+	[self dismissViewControllerAnimated:true completion:nil];
 }
 
 @end

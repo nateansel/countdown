@@ -7,11 +7,18 @@
 //
 
 @import UIKit;
+#import "PushDownButton.h"
 #import "DateChangeButton.h"
+#import "TimeChangeViewDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TimeChangeView : UIView
+
+@property (assign) id<TimeChangeViewDelegate> delegate;
+
+- (NSDate *)date;
+- (void)setDate:(NSDate *)date;
 
 @end
 

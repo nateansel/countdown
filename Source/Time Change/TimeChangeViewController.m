@@ -10,27 +10,37 @@
 
 @interface TimeChangeViewController ()
 
+@property (weak, nullable) TimeChangeView *timeChangeView;
+@property (weak, nullable) NSDate *timeChangeDate;
+
 @end
 
 @implementation TimeChangeViewController
 
 - (void)loadView {
 	self.view = [[TimeChangeView alloc] init];
+	self.timeChangeView = (TimeChangeView *) self.view;
+	self.timeChangeView.delegate = self;
+	[self.timeChangeView setDate:self.timeChangeDate];
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+- (void)setDate:(NSDate *)date {
+	self.timeChangeDate = date;
+	[self.timeChangeView setDate:date];
 }
 
-/*
-#pragma mark - Navigation
+@end
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+// MARK: - TimeChangeViewDelegate
+
+@implementation TimeChangeViewController (TimeChangeViewDelegate)
+
+- (void)cancelButtonPressed {
+	[self.delegate cancelTimeChange];
 }
-*/
+
+- (void)saveButtonPressed {
+	[self.delegate saveNewCountdownTime:[self.timeChangeView date]];
+}
 
 @end

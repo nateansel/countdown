@@ -8,6 +8,7 @@
 
 @import UIKit;
 #import "CountdownView.h"
+#import "TimeChangeViewControllerDelegate.h"
 #import "PresentTimeChangeViewControllerAnimatedTransitioning.h"
 #import "DismissTimeChangeViewControllerAnimatedTransitioning.h"
 
@@ -20,6 +21,12 @@ NS_ASSUME_NONNULL_BEGIN
 // MARK: - UIViewControllerTransitioningDelegate
 
 @interface CountdownViewController (UIViewControllerTransitioningDelegate) <UIViewControllerTransitioningDelegate>
+
+@end
+
+// MARK: - TimeChangeViewControllerDelegate
+
+@interface CountdownViewController (TimeChangeViewControllerDelegate) <TimeChangeViewControllerDelegate>
 
 @end
 

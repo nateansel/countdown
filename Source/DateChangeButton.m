@@ -40,7 +40,7 @@
 	[self.layer setShadowOffset:CGSizeZero];
 	[self.layer setShadowColor:[[UIColor blackColor] CGColor]];
 	[self.layer setShadowRadius:3];
-	[self.layer setShadowOpacity:0.20];
+	[self.layer setShadowOpacity:0.35];
 	
 	self.dateFormatter = [[NSDateFormatter alloc] init];
 	[self.dateFormatter setDateStyle:NSDateFormatterMediumStyle];

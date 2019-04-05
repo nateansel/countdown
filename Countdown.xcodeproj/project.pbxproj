@@ -20,6 +20,7 @@
 		0EC9A66C21ADDB8C0060153E /* PushDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC9A66B21ADDB8C0060153E /* PushDownButton.m */; };
 		0EFC37872256B4CE0018D031 /* PresentTimeChangeViewControllerAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC37862256B4CE0018D031 /* PresentTimeChangeViewControllerAnimatedTransitioning.m */; };
 		0EFC378A2257BF6D0018D031 /* DismissTimeChangeViewControllerAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC37892257BF6D0018D031 /* DismissTimeChangeViewControllerAnimatedTransitioning.m */; };
+		0EFC378D2257F7F40018D031 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EFC378C2257F7F40018D031 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,9 @@
 		0EFC37862256B4CE0018D031 /* PresentTimeChangeViewControllerAnimatedTransitioning.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentTimeChangeViewControllerAnimatedTransitioning.m; sourceTree = "<group>"; };
 		0EFC37882257BF6D0018D031 /* DismissTimeChangeViewControllerAnimatedTransitioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DismissTimeChangeViewControllerAnimatedTransitioning.h; sourceTree = "<group>"; };
 		0EFC37892257BF6D0018D031 /* DismissTimeChangeViewControllerAnimatedTransitioning.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DismissTimeChangeViewControllerAnimatedTransitioning.m; sourceTree = "<group>"; };
+		0EFC378B2257F3600018D031 /* TimeChangeViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeChangeViewControllerDelegate.h; sourceTree = "<group>"; };
+		0EFC378C2257F7F40018D031 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		0EFC378E2258002D0018D031 /* TimeChangeViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeChangeViewDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +74,10 @@
 			children = (
 				0E01890121B7397200A391D3 /* TimeChangeView.h */,
 				0E01890221B7397200A391D3 /* TimeChangeView.m */,
+				0EFC378E2258002D0018D031 /* TimeChangeViewDelegate.h */,
 				0E01890421B7398600A391D3 /* TimeChangeViewController.h */,
 				0E01890521B7398600A391D3 /* TimeChangeViewController.m */,
+				0EFC378B2257F3600018D031 /* TimeChangeViewControllerDelegate.h */,
 				0EFC37852256B4CE0018D031 /* PresentTimeChangeViewControllerAnimatedTransitioning.h */,
 				0EFC37862256B4CE0018D031 /* PresentTimeChangeViewControllerAnimatedTransitioning.m */,
 				0EFC37882257BF6D0018D031 /* DismissTimeChangeViewControllerAnimatedTransitioning.h */,
@@ -122,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				0EB0094F21A4B48500263D2A /* Assets.xcassets */,
+				0EFC378C2257F7F40018D031 /* Colors.xcassets */,
 				0EB0095121A4B48500263D2A /* LaunchScreen.storyboard */,
 				0EB0095421A4B48500263D2A /* Info.plist */,
 				0EB0095521A4B48500263D2A /* main.m */,
@@ -213,6 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EFC378D2257F7F40018D031 /* Colors.xcassets in Resources */,
 				0EB0095321A4B48500263D2A /* LaunchScreen.storyboard in Resources */,
 				0EB0095021A4B48500263D2A /* Assets.xcassets in Resources */,
 			);

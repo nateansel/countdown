@@ -8,10 +8,19 @@
 
 @import UIKit;
 #import "TimeChangeView.h"
+#import "TimeChangeViewControllerDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TimeChangeViewController : UIViewController
+
+@property (assign) id<TimeChangeViewControllerDelegate> delegate;
+
+- (void)setDate:(NSDate *)date;
+
+@end
+
+@interface TimeChangeViewController (TimeChangeViewDelegate) <TimeChangeViewDelegate>
 
 @end
 
