@@ -15,6 +15,7 @@
 @property (nonatomic, strong, nonnull) UIView *backgroundView;
 @property (nonatomic, strong, nonnull) PushDownButton *cancelButton;
 @property (nonatomic, strong, nonnull) PushDownButton *saveButton;
+@property bool shouldDisplayCompact;
 
 @end
 
@@ -37,6 +38,8 @@
 }
 
 - (void)commonTimeChangeViewInit {
+	self.compactFrame = CGRectZero;
+	self.shouldDisplayCompact = NO;
 	self.dateButton = [[DateChangeButton alloc] init];
 	self.countingDownLabel = [[UILabel alloc] init];
 	self.backgroundView = [[UIView alloc] init];
@@ -66,6 +69,7 @@
 	[NSLayoutConstraint activateConstraints:@[[self.dateButton.topAnchor constraintEqualToAnchor:self.backgroundView.topAnchor],
 											  [self.dateButton.centerXAnchor constraintEqualToAnchor:self.backgroundView.centerXAnchor]]];
 	[self.dateButton setDate:[[NSDate alloc] init]];
+	[self.dateButton setHidden:YES];
 	
 	// Cancel & Save buttons
 	[self.cancelButton setBackgroundColor:[UIColor colorNamed:@"cancel_button"]];
@@ -83,19 +87,28 @@
 
 - (void)layoutSubviews {
 	[super layoutSubviews];
-	CGRect safeAreaFrame = CGRectMake(self.frame.origin.x + self.safeAreaInsets.left,
-									  self.frame.origin.y + self.safeAreaInsets.top,
-									  self.frame.size.width - self.safeAreaInsets.left + self.safeAreaInsets.right,
-									  self.frame.size.height - self.safeAreaInsets.top + self.safeAreaInsets.bottom);
-	CGRect backgroundViewFrame = CGRectMake(safeAreaFrame.origin.x + 24,
-											safeAreaFrame.origin.y,
-											safeAreaFrame.size.width - (safeAreaFrame.origin.x + 24) - 24,
-											safeAreaFrame.size.height - safeAreaFrame.origin.y - 24);
-	[self.backgroundView setFrame:backgroundViewFrame];
-	[self.backgroundView.layer setCornerRadius:24];
+	if (self.shouldDisplayCompact) {
+		[self.backgroundView setFrame:self.compactFrame];
+		self.cancelButton.alpha = 0;
+		self.saveButton.alpha = 0;
+		[self.layer setCornerRadius:self.compactFrame.size.height / 2];
+	} else {
+		CGRect safeAreaFrame = CGRectMake(self.frame.origin.x + self.safeAreaInsets.left,
+										  self.frame.origin.y + self.safeAreaInsets.top,
+										  self.frame.size.width - self.safeAreaInsets.left + self.safeAreaInsets.right,
+										  self.frame.size.height - self.safeAreaInsets.top + self.safeAreaInsets.bottom);
+		CGRect backgroundViewFrame = CGRectMake(safeAreaFrame.origin.x + 24,
+												safeAreaFrame.origin.y,
+												safeAreaFrame.size.width - (safeAreaFrame.origin.x + 24) - 24,
+												safeAreaFrame.size.height - safeAreaFrame.origin.y - 24);
+		[self.backgroundView setFrame:backgroundViewFrame];
+		[self.backgroundView.layer setCornerRadius:24];
+		self.cancelButton.alpha = 0;
+		self.saveButton.alpha = 0;
+	}
 	self.cancelButton.frame = CGRectMake(16,
-										 backgroundViewFrame.size.height - (42 + 16),
-										 (backgroundViewFrame.size.width / 2) - 16 - 8,
+										 self.backgroundView.frame.size.height - (42 + 16),
+										 (self.backgroundView.frame.size.width / 2) - 16 - 8,
 										 42);
 	self.saveButton.frame = CGRectMake(self.cancelButton.frame.origin.x + self.cancelButton.frame.size.width + 16,
 									   self.cancelButton.frame.origin.y,
@@ -131,6 +144,19 @@
 						 }
 						 completion:nil];
 	}
+}
+
+- (void)setCompactLayoutWithFrame:(CGRect)frame {
+	self.shouldDisplayCompact = YES;
+	self.compactFrame = frame;
+	[self setNeedsLayout];
+	[self layoutIfNeeded];
+}
+
+- (void)setFullLayout {
+	self.shouldDisplayCompact = NO;
+	[self setNeedsLayout];
+	[self layoutIfNeeded];
 }
 
 @end

@@ -17,6 +17,14 @@
 
 @implementation TimeChangeViewController
 
+- (UIModalTransitionStyle)modalTransitionStyle {
+	return UIModalTransitionStyleCoverVertical;
+}
+
+- (UIModalPresentationStyle)modalPresentationStyle {
+	return UIModalPresentationOverCurrentContext;
+}
+
 - (void)loadView {
 	self.view = [[TimeChangeView alloc] init];
 	self.timeChangeView = (TimeChangeView *) self.view;
@@ -27,6 +35,14 @@
 - (void)setDate:(NSDate *)date {
 	self.timeChangeDate = date;
 	[self.timeChangeView setDate:date];
+}
+
+- (void)setCompactLayoutWithFrame:(CGRect)frame {
+	[self.timeChangeView setCompactLayoutWithFrame:frame];
+}
+
+- (void)setFullLayout {
+	[self.timeChangeView setFullLayout];
 }
 
 @end

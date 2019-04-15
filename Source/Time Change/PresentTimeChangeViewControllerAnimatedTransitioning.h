@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PresentTimeChangeViewControllerAnimatedTransitioning : NSObject
 
+@property (strong, atomic, nonnull) TimeChangeViewController *toViewController;
+@property CGRect startingFrame;
+
 @end
 
 // MARK: - UIViewControllerAnimatedTransitioning

@@ -47,7 +47,8 @@
 												target:self
 											  selector:@selector(updateValues:)
 											  userInfo:nil
-											   repeats:YES];
+											   repeats:NO];
+//											   repeats:YES];
 	[[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
 	[self updateValues:nil];
 	[self.countdownView hideElementsAnimated:YES withDelay:3];
@@ -59,7 +60,7 @@
 	vc.delegate = self;
 	[vc setDate:self.countdownToDate];
 	[vc setModalPresentationStyle:UIModalPresentationOverCurrentContext];
-//	vc.transitioningDelegate = self;
+	vc.transitioningDelegate = self;
 	[self presentViewController:vc animated:true completion:nil];
 }
 
@@ -68,7 +69,10 @@
 }
 
 - (void)updateValues:(NSTimer *)timer {
-	NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond fromDate:[[NSDate alloc] init] toDate:self.countdownToDate options:0];
+	NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond
+																   fromDate:[[NSDate alloc] init]
+																	 toDate:self.countdownToDate
+																	options:0];
 	NSInteger hours = components.hour;
 	NSInteger minutes = components.minute;
 	NSInteger seconds = components.second;
@@ -87,13 +91,15 @@
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
 	PresentTimeChangeViewControllerAnimatedTransitioning *transition = [[PresentTimeChangeViewControllerAnimatedTransitioning alloc] init];
+	transition.toViewController = (TimeChangeViewController *) presented;
+	transition.startingFrame = self.countdownView.countdownToDateButton.frame;
 	return transition;
 }
 
-- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
-	DismissTimeChangeViewControllerAnimatedTransitioning *transition = [[DismissTimeChangeViewControllerAnimatedTransitioning alloc] init];
-	return transition;
-}
+//- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+//	DismissTimeChangeViewControllerAnimatedTransitioning *transition = [[DismissTimeChangeViewControllerAnimatedTransitioning alloc] init];
+//	return transition;
+//}
 
 @end
 

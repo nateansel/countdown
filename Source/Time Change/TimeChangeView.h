@@ -16,9 +16,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface TimeChangeView : UIView
 
 @property (assign) id<TimeChangeViewDelegate> delegate;
+@property CGRect compactFrame;
 
 - (NSDate *)date;
 - (void)setDate:(NSDate *)date;
+
+- (void)setCompactLayoutWithFrame:(CGRect)frame;
+- (void)setFullLayout;
 
 @end
 

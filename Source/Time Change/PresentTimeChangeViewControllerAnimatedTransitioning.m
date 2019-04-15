@@ -15,7 +15,14 @@
 @implementation PresentTimeChangeViewControllerAnimatedTransitioning (UIViewControllerAnimatedTransitioning)
 
 - (void)animateTransition:(nonnull id<UIViewControllerContextTransitioning>)transitionContext {
-	#warning Add animation
+	[self.toViewController setCompactLayoutWithFrame:self.startingFrame];
+	[UIView animateWithDuration:[self transitionDuration:transitionContext]
+						  delay:0
+						options:UIViewAnimationOptionCurveEaseInOut
+					 animations:^{
+						 [self.toViewController setFullLayout];
+					 }
+					 completion:nil];
 }
 
 - (NSTimeInterval)transitionDuration:(nullable id<UIViewControllerContextTransitioning>)transitionContext {
