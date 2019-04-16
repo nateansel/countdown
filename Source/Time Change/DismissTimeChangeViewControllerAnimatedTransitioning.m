@@ -15,11 +15,33 @@
 @implementation DismissTimeChangeViewControllerAnimatedTransitioning (UIViewControllerAnimatedTransitioning)
 
 - (void)animateTransition:(nonnull id<UIViewControllerContextTransitioning>)transitionContext {
-	#warning Add animation
+	UIView *containerView = transitionContext.containerView;
+	containerView.frame = UIScreen.mainScreen.bounds;
+	[containerView addSubview:self.fromViewController.view];
+	[self.fromViewController.view setFrame:containerView.bounds];
+	
+	[UIView animateKeyframesWithDuration:[self transitionDuration:transitionContext]
+								   delay:0
+								 options:UIViewKeyframeAnimationOptionCalculationModeCubic
+							  animations:^{
+								  [UIView addKeyframeWithRelativeStartTime:0
+														  relativeDuration:1
+																animations:^{
+																	[self.fromViewController setCompactLayoutWithFrame:self.endingFrame];
+																}];
+								  [UIView addKeyframeWithRelativeStartTime:0.1
+														  relativeDuration:0.6
+																animations:^{
+																	[self.fromViewController hideButtons];
+																}];
+							  }
+							  completion:^(BOOL finished) {
+								  [transitionContext completeTransition:YES];
+							  }];
 }
 
 - (NSTimeInterval)transitionDuration:(nullable id<UIViewControllerContextTransitioning>)transitionContext {
-	return 0.5;
+	return 0.35;
 }
 
 @end

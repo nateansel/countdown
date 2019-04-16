@@ -96,10 +96,12 @@
 	return transition;
 }
 
-//- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
-//	DismissTimeChangeViewControllerAnimatedTransitioning *transition = [[DismissTimeChangeViewControllerAnimatedTransitioning alloc] init];
-//	return transition;
-//}
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+	DismissTimeChangeViewControllerAnimatedTransitioning *transition = [[DismissTimeChangeViewControllerAnimatedTransitioning alloc] init];
+	transition.fromViewController = (TimeChangeViewController *) dismissed;
+	transition.endingFrame = self.countdownView.countdownToDateButton.frame;
+	return transition;
+}
 
 @end
 

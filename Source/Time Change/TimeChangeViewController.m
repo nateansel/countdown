@@ -32,9 +32,23 @@
 	[self.timeChangeView setDate:self.timeChangeDate];
 }
 
+- (void)viewDidLoad {
+	[super viewDidLoad];
+	[self.view setNeedsLayout];
+	[self.view layoutIfNeeded];
+}
+
 - (void)setDate:(NSDate *)date {
 	self.timeChangeDate = date;
 	[self.timeChangeView setDate:date];
+}
+
+- (void)hideButtons {
+	[self.timeChangeView hideButtons];
+}
+
+- (void)displayButtons {
+	[self.timeChangeView displayButtons];
 }
 
 - (void)setCompactLayoutWithFrame:(CGRect)frame {

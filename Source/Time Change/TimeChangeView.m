@@ -87,10 +87,14 @@
 
 - (void)layoutSubviews {
 	[super layoutSubviews];
+	[self layoutBackgroundView];
+}
+
+- (void)layoutBackgroundView {
 	if (self.shouldDisplayCompact) {
 		[self.backgroundView setFrame:self.compactFrame];
-		self.cancelButton.alpha = 0;
-		self.saveButton.alpha = 0;
+//		[self.cancelButton setAlpha:0];
+//		[self.saveButton setAlpha:0];
 		[self.layer setCornerRadius:self.compactFrame.size.height / 2];
 	} else {
 		CGRect safeAreaFrame = CGRectMake(self.frame.origin.x + self.safeAreaInsets.left,
@@ -103,8 +107,8 @@
 												safeAreaFrame.size.height - safeAreaFrame.origin.y - 24);
 		[self.backgroundView setFrame:backgroundViewFrame];
 		[self.backgroundView.layer setCornerRadius:24];
-		self.cancelButton.alpha = 0;
-		self.saveButton.alpha = 0;
+//		[self.cancelButton setAlpha:1];
+//		[self.saveButton setAlpha:1];
 	}
 	self.cancelButton.frame = CGRectMake(16,
 										 self.backgroundView.frame.size.height - (42 + 16),
@@ -132,31 +136,25 @@
 	[self.dateButton setDate:date];
 }
 
-- (void) setCollapsedDisplayWithDuration:(NSTimeInterval)duration {
-	if (duration == 0) {
-		
-	} else {
-		[UIView animateWithDuration:duration
-							  delay:0
-							options:UIViewAnimationOptionCurveEaseInOut
-						 animations:^{
-							 
-						 }
-						 completion:nil];
-	}
+- (void)hideButtons {
+	[self.cancelButton setAlpha:0];
+	[self.saveButton setAlpha:0];
+}
+
+- (void)displayButtons {
+	[self.cancelButton setAlpha:1];
+	[self.saveButton setAlpha:1];
 }
 
 - (void)setCompactLayoutWithFrame:(CGRect)frame {
 	self.shouldDisplayCompact = YES;
 	self.compactFrame = frame;
-	[self setNeedsLayout];
-	[self layoutIfNeeded];
+	[self layoutBackgroundView];
 }
 
 - (void)setFullLayout {
 	self.shouldDisplayCompact = NO;
-	[self setNeedsLayout];
-	[self layoutIfNeeded];
+	[self layoutBackgroundView];
 }
 
 @end

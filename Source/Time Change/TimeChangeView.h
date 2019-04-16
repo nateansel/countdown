@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSDate *)date;
 - (void)setDate:(NSDate *)date;
 
+- (void)hideButtons;
+- (void)displayButtons;
 - (void)setCompactLayoutWithFrame:(CGRect)frame;
 - (void)setFullLayout;
 

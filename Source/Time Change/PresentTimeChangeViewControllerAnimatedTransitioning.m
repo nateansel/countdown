@@ -15,18 +15,35 @@
 @implementation PresentTimeChangeViewControllerAnimatedTransitioning (UIViewControllerAnimatedTransitioning)
 
 - (void)animateTransition:(nonnull id<UIViewControllerContextTransitioning>)transitionContext {
+	UIView *containerView = transitionContext.containerView;
+	containerView.frame = UIScreen.mainScreen.bounds;
+	[containerView addSubview:self.toViewController.view];
+	[self.toViewController.view setFrame:containerView.bounds];
+	
 	[self.toViewController setCompactLayoutWithFrame:self.startingFrame];
-	[UIView animateWithDuration:[self transitionDuration:transitionContext]
-						  delay:0
-						options:UIViewAnimationOptionCurveEaseInOut
-					 animations:^{
-						 [self.toViewController setFullLayout];
-					 }
-					 completion:nil];
+	[self.toViewController hideButtons];
+	[UIView animateKeyframesWithDuration:[self transitionDuration:transitionContext]
+								   delay:0
+								 options:UIViewKeyframeAnimationOptionCalculationModeCubic
+							  animations:^{
+								  [UIView addKeyframeWithRelativeStartTime:0
+														  relativeDuration:1
+																animations:^{
+																	[self.toViewController setFullLayout];
+																}];
+								  [UIView addKeyframeWithRelativeStartTime:0.3
+														  relativeDuration:0.6
+																animations:^{
+																	[self.toViewController displayButtons];
+																}];
+							  }
+							  completion:^(BOOL finished) {
+								  [transitionContext completeTransition:YES];
+							  }];
 }
 
 - (NSTimeInterval)transitionDuration:(nullable id<UIViewControllerContextTransitioning>)transitionContext {
-	return 0.5;
+	return 0.35;
 }
 
 @end
