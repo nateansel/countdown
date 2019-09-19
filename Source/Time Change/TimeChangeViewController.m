@@ -59,6 +59,10 @@
 	[self.timeChangeView setFullLayout];
 }
 
+- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
+	
+}
+
 @end
 
 // MARK: - TimeChangeViewDelegate

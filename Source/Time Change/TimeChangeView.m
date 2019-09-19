@@ -72,13 +72,13 @@
 	[self.dateButton setHidden:YES];
 	
 	// Cancel & Save buttons
-	[self.cancelButton setBackgroundColor:[UIColor colorNamed:@"cancel_button"]];
-	[self.cancelButton setTitleColor:[UIColor colorNamed:@"cancel_button_text"] forState:UIControlStateNormal];
+	[self.cancelButton setBackgroundColor:[UIColor colorNamed:@"cancel_button" inBundle:nil compatibleWithTraitCollection:self.traitCollection]];
+	[self.cancelButton setTitleColor:[UIColor colorNamed:@"cancel_button_text" inBundle:nil compatibleWithTraitCollection:self.traitCollection] forState:UIControlStateNormal];
 	[self.cancelButton.layer setCornerRadius:8];
 	[self.cancelButton setTitle:@"Cancel" forState:UIControlStateNormal];
 	[self.cancelButton addTarget:self action:@selector(cancelButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-	[self.saveButton setBackgroundColor:[UIColor colorNamed:@"save_button"]];
-	[self.saveButton setTitleColor:[UIColor colorNamed:@"save_button_text"] forState:UIControlStateNormal];
+	[self.saveButton setBackgroundColor:[UIColor colorNamed:@"save_button" inBundle:nil compatibleWithTraitCollection:self.traitCollection]];
+	[self.saveButton setTitleColor:[UIColor colorNamed:@"save_button_text" inBundle:nil compatibleWithTraitCollection:self.traitCollection] forState:UIControlStateNormal];
 	[self.saveButton.layer setCornerRadius:8];
 	[self.saveButton setTitle:@"Save" forState:UIControlStateNormal];
 	[self.saveButton.titleLabel setFont:[UIFont systemFontOfSize:self.saveButton.titleLabel.font.pointSize weight:UIFontWeightBold]];
@@ -155,6 +155,13 @@
 - (void)setFullLayout {
 	self.shouldDisplayCompact = NO;
 	[self layoutBackgroundView];
+}
+
+- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
+	[self.cancelButton setBackgroundColor:[UIColor colorNamed:@"cancel_button" inBundle:nil compatibleWithTraitCollection:self.traitCollection]];
+	[self.cancelButton setTitleColor:[UIColor colorNamed:@"cancel_button_text" inBundle:nil compatibleWithTraitCollection:self.traitCollection] forState:UIControlStateNormal];
+	[self.saveButton setBackgroundColor:[UIColor colorNamed:@"save_button" inBundle:nil compatibleWithTraitCollection:self.traitCollection]];
+	[self.saveButton setTitleColor:[UIColor colorNamed:@"save_button_text" inBundle:nil compatibleWithTraitCollection:self.traitCollection] forState:UIControlStateNormal];
 }
 
 @end

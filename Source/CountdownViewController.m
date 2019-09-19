@@ -30,12 +30,12 @@
 	self.countdownToDate = (NSDate *) [[NSUserDefaults standardUserDefaults] objectForKey:@"countdownToDate"];
 	if (self.countdownToDate == nil) {
 		NSDateComponents *components = [[NSDateComponents alloc] init];
-		[components setTimeZone:[[NSTimeZone alloc] initWithName:@"America/Los_Angeles"]];
+		[components setTimeZone:[[NSTimeZone alloc] initWithName:@"America/Chicago"]];
 		[components setYear:2019];
-		[components setMonth:06];
+		[components setMonth:07];
 		[components setDay:03];
-		[components setHour:10];
-		[components setMinute:00];
+		[components setHour:19];
+		[components setMinute:30];
 		[components setSecond:00];
 		self.countdownToDate = [[NSCalendar currentCalendar] dateFromComponents:components];
 	}
@@ -47,8 +47,8 @@
 												target:self
 											  selector:@selector(updateValues:)
 											  userInfo:nil
-											   repeats:NO];
-//											   repeats:YES];
+//											   repeats:NO];
+											   repeats:YES];
 	[[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
 	[self updateValues:nil];
 	[self.countdownView hideElementsAnimated:YES withDelay:3];
